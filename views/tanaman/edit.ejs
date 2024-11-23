@@ -1,0 +1,20 @@
+<h2 style="text-align: center;">Edit Ranaman</h2>
+<form action="/tanaman/edit/<%= tanaman.id %>" method="POST" style="display: flex; flex-direction: column; gap: 10px; width: 300px; margin: 0 auto; text-align: center;">
+  <div>
+    <label for="nama">Nama:</label>
+    <input type="text" name="nama" id="nama" value="<%= tanaman.nama %>" required>
+  </div>
+  <div>
+    <label for="jenis">Jenis:</label>
+    <input type="text" name="jenis" id="jenis" value="<%= tanaman.jenis %>" required>
+  </div>
+  <div>
+    <label for="musimtanam">Musim Tanam:</label>
+    <input type="text" name="musimtanam" id="musimtanam" value="<%= tanaman.musimtanam %>" required>
+  </div>
+  <div>
+    <label for="deskripsi">Deskripsi:</label>
+    <input type="text" name="deskripsi" id="deskripsi" value="<%= tanaman.deskripsi %>" required>
+  </div>
+  <button type="submit" style="padding: 10px; background-color: #f1e49a; color: rgb(0, 0, 0); border: none; cursor: pointer; text-align: center;">Simpan</button>
+</form>
