@@ -1,0 +1,20 @@
+<h2 style="text-align: center;">Edit Data Tanaman</h2>
+<form action="/tanaman/edit/<%= tanaman.id_tanaman %>?_method=PUT" method="POST" style="display: flex; flex-direction: column; gap: 20px; width: 400px; margin: 0 auto; text-align: left;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="nama_tanaman" style="flex: 1; margin-right: 10px;">Nama:</label>
+    <input type="text" name="nama_tanaman" id="nama_tanaman" value="<%= tanaman.nama_tanaman %>" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="jenis_tanaman" style="flex: 1; margin-right: 10px;">Jenis:</label>
+    <input type="text" name="jenis_tanaman" id="jenis_tanaman" value="<%= tanaman.jenis_tanaman %>" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="musim_tanam" style="flex: 1; margin-right: 10px;">Musim Tanam:</label>
+    <input type="text" name="musim_tanam" id="musim_tanam" value="<%= tanaman.musim_tanam %>" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="deskripsi" style="flex: 1; margin-right: 10px;">Deskripsi:</label>
+    <input type="text" name="deskripsi" id="deskripsi" value="<%= tanaman.deskripsi %>" style="flex: 2;" required>
+  </div>
+  <button type="submit" style="padding: 10px; background-color: #708577; color: rgb(0, 0, 0); border: none; cursor: pointer; text-align: center;">Simpan</button>
+</form>
