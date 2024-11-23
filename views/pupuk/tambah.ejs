@@ -1,0 +1,20 @@
+<h2 style="text-align: center;">Tambah Data Pupuk</h2>
+<form action="/pupuk/tambah" method="POST" style="display: flex; flex-direction: column; gap: 20px; width: 400px; margin: 0 auto; text-align: left;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="nama_pupuk" style="flex: 1; margin-right: 10px;">Nama:</label>
+    <input type="text" name="nama_pupuk" id="nama_pupuk" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="jenis_pupuk" style="flex: 1; margin-right: 10px;">Jenis:</label>
+    <input type="text" name="jenis_pupuk" id="jenis_pupuk" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="komposisi" style="flex: 1; margin-right: 10px;">Komposisi:</label>
+    <input type="text" name="komposisi" id="komposisi" style="flex: 2;" required>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <label for="kegunaan" style="flex: 1; margin-right: 10px;">Kegunaan:</label>
+    <input type="text" name="kegunaan" id="kegunaan" style="flex: 2;" required>
+  </div>
+  <button type="submit" style="padding: 10px; background-color: #708577; color: rgb(0, 0, 0); border: none; cursor: pointer; text-align: center;">Simpan</button>
+</form>
