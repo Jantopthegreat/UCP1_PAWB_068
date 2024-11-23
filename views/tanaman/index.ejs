@@ -1,0 +1,58 @@
+<h2 style="text-align: center;">Daftar Tanaman</h2>
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="/tanaman/tambah" style="background-color: #708577; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Tambah Data Tanaman</a>
+</div>
+<table class="tanaman-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nama</th>
+      <th>Jenis</th>
+      <th>Musim Tanam</th>
+      <th>Deskripsi</th>
+      <th>Aksi</th>
+    </tr>
+    <style>
+    .tanaman-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.tanaman-table th, .tanaman-table td {
+  border: 1px solid #000000;
+  padding: 10px; 
+  text-align: center; /* Menengahkan teks secara horizontal */
+  vertical-align: middle; /* Menengahkan teks secara vertikal */
+}
+
+.tanaman-table th {
+  background-color: #708577; /* Warna latar untuk header */
+  font-weight: bold; /* Teks header lebih tebal */
+}
+    </style>
+  </thead>
+  <tbody>
+    <% tanaman.forEach((t) => { %>
+      <tr>
+        <td><%= t.id_tanaman %></td>
+        <td><%= t.nama_tanaman %></td>
+        <td><%= t.jenis_tanaman %></td>
+        <td><%= t.musim_tanam %></td>
+        <td><%= t.deskripsi %></td>
+        <td>
+          <form action="/tanaman/edit/<%= t.id_tanaman %>" method="GET" style="display:inline;">
+            <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+              Edit
+            </button>
+          </form>
+          <form action="/tanaman/delete/<%= t.id_tanaman %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Yakin ingin menghapus?')" style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+              Hapus
+            </button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
