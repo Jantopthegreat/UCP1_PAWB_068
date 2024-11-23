@@ -1,0 +1,59 @@
+<h2 style="text-align: center;">Daftar Pupuk</h2>
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="/pupuk/tambah" style="background-color: #708577; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Tambah Data Pupuk</a>
+</div>
+<table class="pupuk-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nama</th>
+      <th>Jenis</th>
+      <th>Komposisi</th>
+      <th>Kegunaan</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% pupuk.forEach((p) => { %>
+      <tr>
+        <td><%= p.id_pupuk %></td>
+        <td><%= p.nama_pupuk %></td>
+        <td><%= p.jenis_pupuk %></td>
+        <td><%= p.komposisi %></td>
+        <td><%= p.kegunaan %></td>
+        <td>
+          <form action="/pupuk/edit/<%= p.id_pupuk %>" method="GET" style="display:inline;">
+            <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+              Edit
+            </button>
+          </form>
+          <form action="/pupuk/delete/<%= p.id_pupuk %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Yakin ingin menghapus?')" style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+              Hapus
+            </button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<style>
+  .pupuk-table {
+    margin: 0 auto; /* Menengahkan tabel secara horizontal */
+    border-collapse: collapse; /* Menggabungkan border */
+    width: 80%; /* Lebar tabel */
+  }
+
+  .pupuk-table th, .pupuk-table td {
+    border: 1px solid #000000; /* Border di setiap sel */
+    padding: 10px; /* Ruang di dalam sel */
+    text-align: center; /* Menengahkan teks secara horizontal */
+    vertical-align: middle; /* Menengahkan teks secara vertikal */
+  }
+
+  .pupuk-table th {
+    background-color: #708577; /* Warna latar untuk header */
+    font-weight: bold; /* Teks header lebih tebal */
+  }
+</style>
