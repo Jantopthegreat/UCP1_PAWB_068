@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmFlow</title>
+  <style>
+    body {
+      font-family:'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #a3c1ad ;
+    }
+    header {
+      background-color: rgba(255, 255, 255, 0.119);
+      color: #000000;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      display: inline-block;
+      width: 150px;
+      height: 30px;
+      line-height: 30px;
+    
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+
+    table.hewan-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.hewan-table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to FarmFlow!</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/tanaman">Daftar Tumbuhan</a>
+      <a href="/pupuk">Daftar Pupuk</a>
+    </nav>
+  </header>
+  <main>
+    <%- body %>
+  </main>
+</body>
+</html>
